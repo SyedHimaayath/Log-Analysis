@@ -1,6 +1,6 @@
 # Log-Analysis
 
-### Project Overview
+### Overview
 > A reporting tool that printd out reports based on the data in the database. This reporting tool is a Pytho program using the psycopg2 module to connect to the database.
 
 ### How to Run?
@@ -54,7 +54,6 @@
   ```
   
 #### Running the queries:
-  1. From the vagrant directory inside the virtual machine,run logs.py using:
   ```
-    $ python3 logs.py
+    $ python3 query.py
   ```
