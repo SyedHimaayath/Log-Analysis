@@ -14,7 +14,7 @@ def take_query(query):
 def popular_articles():
     query_01 = '''select title, views from pop_articles limit 3;'''
     results = take_query(query_01)
-    print("01.  What are the most popular three articles of all time?")
+    print("Q01. What are the most popular three articles of all time?")
     for name, num in results:
         print("sol: " + name + " - " + str(num) + " views")
         print("\n\n")
@@ -25,19 +25,19 @@ def popular_authors():
     views from pop_articles, authors where pop_articles.author = author.id
     group by authors.name order by views desc;'''
     results = take_query(query_02)
-    print("02.  Who are the most popular article author of all time?")
+    print("Q02. Who are the most popular article author of all time?")
     for name, num in results:
         print("sol: " + name + " - " + str(num) + " views")
     print("\n\n")
 
 
 def error_log():
-    query_03 = '''select to_char(date,'MON DD YYYY') as date, percent_error
+    query_03 = '''select to_char(date,'Mon DD,YYYY') as date, percent_error
     from log_err_view where percent_error > 1;'''
     results = take_query(query_03)
-    print("03.  What are the most popular three articles of all time?")
+    print("Q03. On which days did more than '1%' of requests lead to errors?")
     for date, value in results:
-        print("sol: " + date + " - " + str(value) + " %"+" errors")
+        print("sol: " + date + " - " + str(value) + "%"+" errors")
     print("\n\n")
 
 
