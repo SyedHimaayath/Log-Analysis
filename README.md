@@ -1,7 +1,7 @@
 # Log-Analysis
 
 ### Overview
-> A reporting tool that printd out reports based on the data in the database. This reporting tool is a Pytho program using the psycopg2 module to connect to the database.
+> A reporting tool that prints out reports based on the data in the database. This reporting tool is a Python program using the psycopg2 module to connect to the database.
 
 ### How to Run?
 
