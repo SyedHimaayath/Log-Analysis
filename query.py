@@ -17,18 +17,18 @@ def popular_articles():
     print("Q01. What are the most popular three articles of all time?")
     for name, num in results:
         print("sol: " + name + " - " + str(num) + " views")
-        print("\n\n")
+        print("\n")
 
 
 def popular_authors():
     query_02 = '''select authors.name as author, sum(pop_articles.views) as
-    views from pop_articles, authors where pop_articles.author = author.id
+    views from pop_articles, authors where pop_articles.author = authors.id
     group by authors.name order by views desc;'''
     results = take_query(query_02)
     print("Q02. Who are the most popular article author of all time?")
     for name, num in results:
         print("sol: " + name + " - " + str(num) + " views")
-    print("\n\n")
+    print("\n")
 
 
 def error_log():
@@ -38,7 +38,7 @@ def error_log():
     print("Q03. On which days did more than '1%' of requests lead to errors?")
     for date, value in results:
         print("sol: " + date + " - " + str(value) + "%"+" errors")
-    print("\n\n")
+    print("\n")
 
 
 if __name__ == '__main__':
