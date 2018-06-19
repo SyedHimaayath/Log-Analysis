@@ -6,13 +6,27 @@
 ### How to Run?
 
 #### PreRequisites:
-  * Python3
-  * Vagrant
-  * VirtualBox
+  * [Python3](https://www.python.org/)
+  * [Vagrant](https://www.vagrantup.com/)
+  * [VirtualBox](https://www.virtualbox.org/)
 
 #### Setup Project:
   1. Install Vagrant and VirtualBox
-  2. Download the data from [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip).
+  2. Download or Clone the [fullstack-nanodegree-vm](https://github.com/udacity/fullstack-nanodegree-vm) repository.
+  3. Download the data from [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip).
+
+#### Launching the Virtual Machine:
+  1. Launch the Vagrant VM inside Vagrant sub-directory inside the fullstack-nanodegree-vm repository using command:
+  
+  ```
+    $ vagrant up
+  ```
+  2. Then Log-in using command:
+  
+  ```
+    $ vagrant ssh
+  ```
+  3. Change directory to /vagrant.
   
 #### Setting up the database:
 
@@ -51,6 +65,12 @@
   as percent_error from log
   group by date(time) order by percent_error desc;
 
+  ```
+
+#### Loading the views
+  views can be loaded using the following command in the terminal
+  ```
+    $ psql -d news -f views.sql
   ```
   
 #### Running the queries:
